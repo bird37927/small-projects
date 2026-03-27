@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人简历</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /* 顶部区域：头像和文字并排 */
+        header {
+            display: flex; /* 开启弹性布局，让子元素排成一排 */
+            align-items: center; /* 垂直方向居中对齐 */
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header-text {
+            flex: 1; /* 让文字区域占据剩余的所有空间 */
+        }
+
+        .profile-pic {
+            width: 100px; /* 图片宽度 */
+            height: 100px; /* 图片高度 */
+            border-radius: 50%; /* 关键点：设置为50%就能让正方形变圆形 */
+            object-fit: cover; /* 保证图片不被拉伸 */
+            margin-left: 20px; /* 头像和文字之间留点距离 */
+            border: 3px solid #007bff; /* 给头像加个蓝色边框 */
+        }
+
+        h1 { margin: 0; color: #007bff; }
+        .contact-info { color: #666; margin-top: 5px; }
+        section { margin-bottom: 30px; }
+        h2 { border-left: 4px solid #007bff; padding-left: 10px; font-size: 1.5rem; }
+        .skills ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; }
+        .skills li { background: #e9ecef; padding: 5px 15px; margin: 5px; border-radius: 20px; }
+
+        /* --- 响应式设计：针对手机屏幕的调整 --- */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column; /* 让头像和文字从横排变成竖排 */
+                text-align: center; /* 文字居中 */
+            }
+
+            .profile-pic {
+                margin-left: 0; /* 取消左边距 */
+                margin-top: 20px; /* 增加上边距，拉开和文字的距离 */
+            }
+
+            .container {
+                padding: 20px; /* 缩小边距，腾出更多空间给内容 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-text">
+                <h1>[你的名字]</h1>
+                <p class="contact-info">电话: 123-4567-8910 | 邮箱: example@email.com | 职位: 前端开发练习生</p>
+            </div>
+            <!-- 这是一张占位图，你可以之后换成自己的照片 -->
+            <img src="https://via.placeholder.com/150" alt="头像" class="profile-pic">
+        </header>
+
+        <section class="about">
+            <h2>关于我</h2>
+            <p>我是一名正在努力学习前端开发的大学生。我对构建精美的网页充满热情，目前正通过实战项目不断提升自己的技能。</p>
+        </section>
+
+        <section class="skills">
+            <h2>专业技能</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>响应式布局</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>教育经历 / 个人项目</h2>
+            <div>
+                <strong>[你的大学名称]</strong> - 计算机科学与技术 (2023 - 2027)
+                <p>在校期间系统学习了计算机基础知识，并开始了前端开发的自学之路。</p>
+            </div>
+            <div>
+                <strong>个人项目：静态简历网页</strong> (2024.03)
+                <p>使用 HTML 和 CSS 独立完成了一个响应式的个人简历页面，掌握了 Flexbox 布局和基本的样式调整。</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
