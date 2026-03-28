@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Pro | 你的智能气象管家</title>
+    <!-- 引入天气图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
+    <!-- 🌟 确保这里路径正确 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-clear">
+    <div class="app-container">
+        <!-- 搜索区域 -->
+        <header class="search-box">
+            <i class="qi-101"></i>
+            <input type="text" id="city-input" placeholder="输入城市名，如：南京市...">
+            <button id="search-btn">搜索</button>
+        </header>
+
+        <!-- 内容分列包装层 -->
+        <div class="content-wrapper">
+            <!-- 左侧：实时天气大看板 -->
+            <main class="main-weather">
+                <div class="location">
+                    <h1 id="city-name">正在加载...</h1>
+                    <p id="update-time">更新时间：--:--</p>
+                </div>
+                
+                <div class="weather-info">
+                    <div class="temp-box">
+                        <span id="temperature">--</span>°
+                    </div>
+                    <div class="condition-box">
+                        <i id="weather-icon" class="qi-100-fill"></i>
+                        <p id="weather-text">--</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- 右侧：详细指标和预报 -->
+            <aside class="side-info">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <p>体感温度</p>
+                        <span id="feels-like">--°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <p>湿度</p>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <p>风向风速</p>
+                        <span id="wind">-- --级</span>
+                    </div>
+                    <div class="detail-item">
+                        <p>空气质量</p>
+                        <span id="aqi">--</span>
+                    </div>
+                </div>
+
+                <section class="forecast">
+                    <h3>未来预报</h3>
+                    <div id="forecast-container" class="forecast-list">
+                        <!-- 由 JS 填充 -->
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
