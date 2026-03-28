@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客科技 | 领先的数字化解决方案专家</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- 1. 导航栏 (Navbar) -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fa-solid fa-rocket text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold tracking-tight">GEEK TECH</span>
+                </div>
+                
+                <!-- 电脑端菜单 -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-blue-600">首页</a>
+                    <a href="#services" class="hover:text-blue-600 transition">服务</a>
+                    <a href="#about" class="hover:text-blue-600 transition">关于</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">联系我们</a>
+                </div>
+
+                <!-- 呼吁行动按钮 -->
+                <div class="hidden md:block">
+                    <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                        立即咨询
+                    </button>
+                </div>
+
+                <!-- 手机端汉堡按钮 (仅显示图标，暂不写逻辑) -->
+                <div class="md:hidden">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. 英雄区 (Hero Section) -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                用技术为企业 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">插上腾飞的翅膀</span>
+            </h1>
+            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
+                我们专注于提供最前沿的 AI 数字化转型方案，已助力全球 500+ 企业实现业务增长与效率变革。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition shadow-xl">
+                    开启转型之路
+                </a>
+                <a href="#" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">
+                    观看演示视频
+                </a>
+            </div>
+            
+            <!-- 英雄区装饰图 -->
+            <div class="mt-16 relative">
+                <div class="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-64 bg-blue-400/20 blur-[100px]"></div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+                     alt="Dashboard Preview" 
+                     class="rounded-2xl shadow-2xl border border-slate-200 mx-auto">
+            </div>
+        </div>
+    </section>
+<!-- ... 导航栏部分：给汉堡按钮增加 id="mobile-menu-btn" ... -->
+<div class="md:hidden">
+    <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:text-blue-600 transition">
+        <i class="fa-solid fa-bars text-2xl"></i>
+    </button>
+</div>
+
+<!-- ... 导航栏下方新增：手机端下拉菜单面板 ... -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 py-6 space-y-4 shadow-xl animate-fade-in-down">
+    <a href="#home" class="block text-lg font-medium text-blue-600">首页</a>
+    <a href="#services" class="block text-lg font-medium hover:text-blue-600">服务</a>
+    <a href="#about" class="block text-lg font-medium hover:text-blue-600">关于</a>
+    <a href="#contact" class="block text-lg font-medium hover:text-blue-600 border-t pt-4">联系我们</a>
+</div>
+
+<!-- ... 英雄区代码保持不变 ... -->
+
+<!-- 3. 服务功能区 (Services Section) -->
+<section id="services" class="py-24 bg-white px-4">
+    <div class="max-w-7xl mx-auto">
+        <!-- 标题区 -->
+        <div class="text-center mb-16">
+            <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3">我们的专长</h2>
+            <p class="text-3xl md:text-4xl font-bold text-slate-900">助力业务全方位数字化</p>
+        </div>
+
+        <!-- 服务卡片网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 卡片 1 -->
+            <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-microchip text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">AI 智能决策</h3>
+                <p class="text-slate-600 leading-relaxed">利用深度学习算法，为您的企业提供精准的市场预测与自动化运营方案。</p>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500 group-hover:text-white transition">
+                    <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">云原生架构</h3>
+                <p class="text-slate-600 leading-relaxed">全方位的上云迁移服务，确保您的系统具备极高的并发处理能力与稳定性。</p>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-user-shield text-2xl"></i> <!-- 🌟 换成这个更稳健的类名 -->
+                </div>
+                <h3 class="text-xl font-bold mb-4">企业级安全</h3>
+                <p class="text-slate-600 leading-relaxed">端到端的数据加密与实时威胁防御，为您的数字化资产保驾护航。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4.5 成就数据区 (Stats Section) -->
+<section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+            <div class="text-4xl md:text-5xl font-bold mb-2 count-up" data-target="10">0</div>
+            <p class="text-blue-100 text-sm uppercase tracking-widest">年行业经验</p>
+        </div>
+        <div>
+            <div class="text-4xl md:text-5xl font-bold mb-2 count-up" data-target="500">0</div>
+            <p class="text-blue-100 text-sm uppercase tracking-widest">助力企业转型</p>
+        </div>
+        <div>
+            <div class="text-4xl md:text-5xl font-bold mb-2 count-up" data-target="98">0</div>
+            <p class="text-blue-100 text-sm uppercase tracking-widest">客户满意度 %</p>
+        </div>
+        <div>
+            <div class="text-4xl md:text-5xl font-bold mb-2 count-up" data-target="24">0</div>
+            <p class="text-blue-100 text-sm uppercase tracking-widest">全天候技术支持</p>
+        </div>
+    </div>
+</section>
+<!-- 5. 完备级页脚 (Footer) -->
+<footer class="bg-slate-900 text-slate-300 pt-20 pb-10 px-4">
+    <div class="max-w-7xl mx-auto">
+        <!-- 页脚主网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            
+            <!-- 第一列：品牌介绍 -->
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center mb-6 text-white">
+                    <i class="fa-solid fa-rocket text-blue-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold tracking-tight">GEEK TECH</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-6">
+                    致力于用 AI 与数字化技术重塑企业竞争力。我们不仅是技术提供商，更是您的数字化转型合伙人。
+                </p>
+                <!-- 社交媒体图标 -->
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                        <i class="fa-brands fa-weixin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 第二列：快速链接 -->
+            <div>
+                <h4 class="text-white font-bold mb-6">核心服务</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-500 transition">AI 智能决策</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">云原生架构</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">企业级安全</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">数字化看板</a></li>
+                </ul>
+            </div>
+
+            <!-- 第三列：关于我们 -->
+            <div>
+                <h4 class="text-white font-bold mb-6">关于我们</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-500 transition">公司简介</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">加入我们</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">新闻动态</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">合作伙伴</a></li>
+                </ul>
+            </div>
+
+            <!-- 第四列：联系方式 -->
+            <div>
+                <h4 class="text-white font-bold mb-6">联系我们</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-blue-500"></i>
+                        <span>南京市雨花台区软件大道 101 号</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-phone mr-3 text-blue-500"></i>
+                        <span>400-123-4567</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-blue-500"></i>
+                        <span>contact@geektech.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 底部版权区 -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:row justify-between items-center text-xs">
+            <p>© 2026 极客科技 (GEEK TECH). 保留所有权利。</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">隐私政策</a>
+                <a href="#" class="hover:text-white transition">服务条款</a>
+                <a href="#" class="hover:text-white transition">Cookie 设置</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // --- 1. 汉堡菜单逻辑 ---
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // --- 2. 数字滚动动画 (数字跳动) ---
+    const counters = document.querySelectorAll('.count-up');
+    const speed = 100; // 数字跳动的速度
+
+    const startCounting = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + (target === 500 ? '+' : '');
+                    }
+                };
+                updateCount();
+                observer.unobserve(counter); // 只跑一次动画
+            }
+        });
+    };
+
+    // --- 3. 滚动观察器 (Intersection Observer) ---
+    // 降低 threshold 到 0.2，确保进入视野一小部分就触发
+    const observer = new IntersectionObserver(startCounting, { threshold: 0.2 });
+    counters.forEach(counter => observer.observe(counter));
+
+    // --- 4. 导航栏滚动阴影 ---
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-xl', 'bg-white/95');
+        } else {
+            nav.classList.remove('shadow-xl', 'bg-white/95');
+        }
+    });
+</script>
+</body>
+</html>
