@@ -9,8 +9,10 @@ app.use(express.json());
 
 // 2. 连接 MongoDB 数据库
 // blog_db 是我们要创建的数据库名称，如果不存在，MongoDB 会自动帮你创建
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/blog_db')
-    .then(() => console.log('✅ 成功连接到 MongoDB 数据库！'))
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://bird916:Qpv135790@cluster0.m7nnbkp.mongodb.net/blog_db?retryWrites=true&w=majority&appName=Cluster0';
+
+mongoose.connect(MONGODB_URI)
+    .then(() => console.log('✅ 成功连接到 MongoDB Atlas 云数据库！'))
     .catch(err => console.error('❌ 数据库连接失败:', err));
 
 // 3. 定义数据模型 (Schema)
