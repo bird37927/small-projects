@@ -52,7 +52,7 @@
                 // 核心逻辑：从后端接口获取数据
                 const fetchPosts = async () => {
                     try {
-                        const res = await fetch('http://localhost:3000/api/posts');
+                        const res = await fetch('https://my-fullstack-blog-2026.onrender.com/api/posts');
                         posts.value = await res.json();
                     } catch (err) {
                         console.error("加载失败:", err);
@@ -67,7 +67,7 @@
                     }
 
                     try {
-                        const res = await fetch('http://localhost:3000/api/posts', {
+                        const res = await fetch('https://my-fullstack-blog-2026.onrender.com/api/posts', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
